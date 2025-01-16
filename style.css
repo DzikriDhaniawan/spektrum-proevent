@@ -1,4 +1,3 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,9 +12,11 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('/pict/color2.png') center/cover no-repeat;
+    background: linear-gradient(to bottom, rgba(47, 0, 255, 0.72), rgba(7, 139, 196, 0.7),rgba(168, 230, 255, 0.7),rgba(221, 231, 239, 0.7)), url('/pict/color2.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    color: white;
 }
-
 .overlay {
     position: absolute;
     top: 0;
@@ -59,7 +60,7 @@ body {
 .hero-content {
     top: 50%;
     margin-top: 100px;
-    margin-left: 180px;
+    margin-left: 120px;
 }
 
 .hero-content h1 {
@@ -71,7 +72,7 @@ body {
 }
 
 .button-next{
-    margin-left: 180px;
+    margin-left: 120px;
     margin-top: 60px;
 }
 
@@ -93,19 +94,19 @@ body {
     background-image: linear-gradient(90deg,#1c1c1c,#6220fb);
     border: 0 solid;
     overflow: hidden;
-  }
-  
-  .get-started:hover {
+}
+
+.get-started:hover {
     cursor: pointer;
     transition: all .3s ease-in;
     padding-right: 30px;
     padding-left: 30px;
-  }
+}
 
-  .get-started a {
+.get-started a {
     text-decoration: none;
     color: white;
-  }
+}
 
 .contact-button-section{
     display: flex;
@@ -113,26 +114,26 @@ body {
     margin-top: 14em;
 }
 
-  .contact-button {
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  border: none;
-  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
-  position: relative;
-  z-index: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1.2em;
-  transition: 0.1s;
+.contact-button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.2em;
+    transition: 0.1s;
 }
 .contact-button svg {
-  color: white;
-  width: 30px;
-  height: 30px;
-  z-index: 9;
+    color: white;
+    width: 30px;
+    height: 30px;
+    z-index: 9;
 }
 
 .contact-button:nth-child(1) {
@@ -176,5 +177,5 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('/pict/color4.png') center/cover no-repeat;
+    background: linear-gradient(to bottom, rgba(47, 0, 255, 0.72), rgba(7, 139, 196, 0.7),rgba(88, 123, 137, 0.7),rgba(90, 114, 159, 0.7)), url('/pict/color2.png') center/cover no-repeat;
 }
