@@ -173,9 +173,47 @@ body {
     height: 0px;
 }
 
+/*ABOUT SECTION START*/
+
 .about-section{
     position: relative;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(47, 0, 255, 0.72), rgba(7, 139, 196, 0.7),rgba(88, 123, 137, 0.7),rgba(90, 114, 159, 0.7)), url('/pict/color2.png') center/cover no-repeat;
+    background: linear-gradient(to bottom, rgba(215, 233, 251, 0.72), rgba(88, 199, 247, 0.7),rgba(13, 179, 245, 0.7),rgba(20, 92, 224, 0.7)), url('/pict/color7.png') center/cover no-repeat;
 }
+
+/*===========================ABOUT SECTION END==================================*/
+
+/*==========================PRODUCT SECTION START===============================*/
+
+.product-section{
+    position:relative ;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+/*===========================ABOUT SECTION END===================================*/
+
+
+/*===========================GALLERY SECTION START===============================*/
+
+.gallery-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+/*===========================GALLERY SECTION END=================================*/
+
+/*===========================CONTACT SECTION START===============================*/
+
+.contact-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #fcb045;
+}
+
+/*===========================CONTACT SECTION END==================================*/
