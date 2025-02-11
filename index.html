@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero-section">
+    <header class="hero-section" id="hero-section">
+      <div class="video-background">
+        <video autoplay muted loop> <source src="pict/videocolor.mp4" type="video/mp4"> </video>
+      </div>
         <div class="overlay">
             <nav class="navbar">
                 <a href="#" class="logo"><img src="pict/logo spektrum.png" alt=""></a>
                 <ul class="nav-links">
-                    <li><a href="#hero-content">Home</a></li>
+                    <li><a href="#hero-section">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#product">Product</a></li>
                     <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#articles">Article</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -24,11 +28,12 @@
             <div class="hero-content">
                 <h1>Turning Your <span class="vision">Vision</span> <br>into an Unforgettable Event</h1>
                 <p>Experience multimedia solutions tailored for your needs.</p>
-            </div>
+            </div> 
 
             <div class="button-next">
                 <button class="get-started"><a href="#about">Get Started</a></button>
             </div>
+
 
             <div class="contact-button-section">
               <button class="contact-button">
@@ -113,24 +118,141 @@
 
         </header>
 
-    <section class="about-section" id="about">
-        <div class="about-content">
-        <h1>About Us</h1>
-        <h2>Professional and High-Quality <br> Live Streaming Center</h2>
-    </div>
+        <section class="about-section" id="about">
+          <div class="container">
+              <div class="about-content">
+                  <h1>About Us</h1>
+                  <p>
+                      Spektrum Production adalah penyedia layanan <strong>live streaming</strong> dan <strong>rental peralatan audiovisual</strong> dengan solusi yang disesuaikan untuk setiap kebutuhan klien.
+                      Kami berkomitmen untuk menghadirkan layanan berkualitas tinggi dengan harga yang kompetitif.
+                  </p>
+                  <p>
+                      Sejak berdiri pada 2013, kami telah menangani berbagai acara, baik nasional maupun internasional, dengan layanan yang andal dan inovatif.  
+                      Kami percaya bahwa setiap momen berharga layak untuk didokumentasikan secara profesional.
+                  </p>
+              </div>
+              <div class="about-image">
+                  <img src="pict/4.jpeg" alt="Professional Camera">
+              </div>
+          </div>
+      </section>
+      
+      <section class="awesome-section" id="awesome">
+        <div class="awesome-container">
+            <h1 class="awesome-title">What Makes Us <span>Awesome!</span></h1>
+            <div class="awesome-grid">
+                <div class="awesome-item">
+                    <img src="pict/centang.png" alt="Build confidence">
+                    <h2>Best Quality and Service</h2>
+                    <p>We deliver top-quality event production, from equipment to services, ensuring unforgettable experiences. Our exceptional customer service focuses on responsiveness, friendliness, and effective problem-solving.</p>
+                </div>
+                <div class="awesome-item">  
+                    <img src="pict/flexible.png" alt="Promote curiosity">
+                    <h2>Flexibility Based in Client's Needs</h2>
+                    <p>We are prepared to readily adapt to changes and the unique requirements of each event. Our flexibility guarantees that we will meet every detail to the client's exact expectations.</p>
+                </div>
+                <div class="awesome-item">
+                    <img src="pict/solution.png" alt="Accelerate progress">
+                    <h2>Delivering Comprehensive Solution</h2>
+                    <p>With expertise in Audio, Video, Multimedia, and Lighting, our goal is to be the ultimate solution for all our clients' event production needs.</p>
+                </div>
+            </div>
+        </div>
     </section>
-
+        
     <section class="product-section" id="product">
-      <div class="product-content">
-        <h1>Our Products</h1>
+      <div class="container">
+          <h1 class="product-title">Our Products</h1>
+          <div class="product-grid">
+              <div class="product-item">
+                  <img src="pict/tv led.png" alt="TV LED">
+                  <h2>TV LED</h2>
+                  <p>High-quality LED televisions for a superior viewing experience.</p>
+              </div>
+              <div class="product-item">
+                  <img src="pict/tv_touchscreen.png" alt="TV Touchscreen">
+                  <h2>TV Touchscreen</h2>
+                  <p>Interactive touchscreen displays for modern presentations.</p>
+              </div>
+              <div class="product-item">
+                  <img src="pict/digital_signage.png" alt="Digital Signage">
+                  <h2>Digital Signage</h2>
+                  <p>Dynamic digital signage solutions for effective communication.</p>
+              </div>
+              <div class="product-item">
+                  <img src="pict/led_videotron.png" alt="LED Videotron">
+                  <h2>LED Videotron</h2>
+                  <p>Bright and vivid LED videotrons for impactful advertising.</p>
+              </div>
+          </div>
       </div>
-    </section>
+  </section>
+          
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+        <h1 class="gallery-title">Gallery</h1>
 
-    <section class="gallery-section" id="gallery">
-      <div class="gallery-content">
-        <h1>Gallery</h1>
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/photo1.jpg" alt="Event 1">
+                <p>Event Opening Ceremony 2024</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo2.jpg" alt="Workshop">
+                <p>Workshop Multimedia Production</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo3.jpg" alt="Studio">
+                <p>Behind the Scenes - Studio Setup</p>
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo4.jpg" alt="Videography">
+                <p>Professional Videography Session</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="popular-articles" id="articles">
+  <h2 class="section-title">Articles</h2>
+  <div class="articles-container">
+      <div class="article-card">
+          <img src="pict/4.jpeg" alt="Artikel 1">
+          <div class="article-info">
+              <p class="grade">Kelas 12</p>
+              <h3 class="article-title">evaluasi kinerja dpr dan....</h3>
+              <p class="article-meta">15 Mei 2023</p>
+          </div>
       </div>
-    </section>
+      <div class="article-card">
+          <img src="images/article2.jpg" alt="Artikel 2">
+          <div class="article-info">
+              <p class="grade">Kelas 12</p>
+              <h3 class="article-title">Bentuk Transaksi pada Perusahaan Dagang</h3>
+              <p class="article-meta">23 Mei 2023 • Kelas Pintar</p>
+          </div>
+      </div>
+      <div class="article-card">
+          <img src="images/article3.jpg" alt="Artikel 3">
+          <div class="article-info">
+              <p class="grade">Kelas 11</p>
+              <h3 class="article-title">Teori Pertumbuhan Ekonomi Menurut W.W...</h3>
+              <p class="article-meta">17 Mei 2023 • Kelas Pintar</p>
+          </div>
+      </div>
+      <div class="article-card">
+          <img src="images/article4.jpg" alt="Artikel 4">
+          <div class="article-info">
+              <p class="grade">Kelas 10</p>
+              <h3 class="article-title">Peradaban Tiongkok Kuno: Bentuk...</h3>
+              <p class="article-meta">29 Mei 2023 • Kelas Pintar</p>
+          </div>
+      </div>
+  </div>
+</section>
+
 
     <section class="contact-section">
       <div class="contact-content">
