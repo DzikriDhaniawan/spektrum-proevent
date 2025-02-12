@@ -491,9 +491,7 @@ body {
 
     .product-grid {
         grid-template-columns: 1fr;
-    }
-}
-/*===========================ABOUT SECTION END===================================*/
+    }}/*===========================ABOUT SECTION END===================================*/
 
 
 
@@ -731,7 +729,7 @@ body {
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .gallery-item:hover .overlay {

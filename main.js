@@ -17,4 +17,5 @@ document.getElementById("articleModal").addEventListener("click", function (even
     if (event.target === this) {
         closeModal();
     }
-});
+}); 
+
