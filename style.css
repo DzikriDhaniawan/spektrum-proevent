@@ -572,6 +572,96 @@ body {
     transform: translateY(-5px);
 }
 
+/* Modal Overlay */
+/* Style Modal */
+/* Style Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Konten Modal */
+.modal-content {
+    background: white;
+    width: 60%;
+    max-width: 800px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Gambar Kiri */
+.modal img {
+    width: 35%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Teks Kanan */
+.modal-text {
+    padding-left: 20px;
+    width: 65%;
+}
+
+/* Judul Artikel */
+.modal-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #112d57;
+    margin-bottom: 10px;
+}
+
+/* Meta (Tanggal) */
+.modal-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Deskripsi */
+.modal-description {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Tombol Close */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #444;
+}
+.modal-close:hover {
+    color: red;
+}
+
+/* Animasi Modal */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /*===========================ARTICLE SECTION END===============================*/
 
 

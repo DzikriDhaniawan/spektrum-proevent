@@ -6,6 +6,8 @@
     <title>Spektrum Production</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
 </head>
 <body>
     <header class="hero-section" id="hero-section">
@@ -216,36 +218,55 @@
   <section class="popular-articles" id="articles">
     <h2 class="section-title">Articles</h2>
     <div class="articles-container">
-        <div class="article-card">
+
+        <div class="article-card" onclick="openModal('pict/evaluasi.jpeg','Evaluasi Kinerja DPR Wilayah Provinsi Bali', '15 Mei 2023', 'Evaluasi kinerja DPR di wilayah Bali membahas berbagai pencapaian dan tantangan dalam periode legislatif terbaru.')">
             <img src="pict/evaluasi.jpeg" alt="Artikel 1">
             <div class="article-info">
-                <h3 class="article-title">evaluasi kinerja dpr wilayah provinsi bali..</h3>
+                <h3 class="article-title">Evaluasi Kinerja DPR Wilayah Provinsi Bali</h3>
                 <p class="article-meta">15 Mei 2023</p>
             </div>
         </div>
-        <div class="article-card">
+
+        <div class="article-card" onclick="openModal('pict/joyday event.jpeg', 'Evolve in Unity Co-Create New Future', '23 Mei 2023', 'Acara ini mempertemukan para pemimpin industri untuk menciptakan masa depan yang lebih inovatif dan berkelanjutan.')">
             <img src="pict/joyday event.jpeg" alt="Artikel 2">
             <div class="article-info">
-                <h3 class="article-title">evolve in unity co-create new future</h3>
+                <h3 class="article-title">Evolve in Unity Co-Create New Future</h3>
                 <p class="article-meta">23 Mei 2023</p>
             </div>
         </div>
-        <div class="article-card">
+
+        <div class="article-card" onclick="openModal('pict/women on the move  2.jpg', 'Women on the Move', '17 Mei 2023', 'Acara ini mengangkat peran perempuan dalam kepemimpinan dan dampaknya terhadap masyarakat.')">
             <img src="pict/women on the move  2.jpg" alt="Artikel 3">
             <div class="article-info">
-                <h3 class="article-title">women on the move</h3>
+                <h3 class="article-title">Women on the Move</h3>
                 <p class="article-meta">17 Mei 2023</p>
             </div>
         </div>
-        <div class="article-card">
+
+        <div class="article-card" onclick="openModal('pict/signing blue.jpg', 'Signing Blue Advancing Responsible Marine', '29 Mei 2023', 'Inisiatif Signing Blue bertujuan untuk meningkatkan kesadaran dan aksi dalam perlindungan lingkungan laut.')">
             <img src="pict/signing blue.jpg" alt="Artikel 4">
             <div class="article-info">
-                <h3 class="article-title">signing blue advancing responsible marine..</h3>
+                <h3 class="article-title">Signing Blue Advancing Responsible Marine</h3>
                 <p class="article-meta">29 Mei 2023</p>
             </div>
         </div>
+
     </div>
-  </section>
+</section>
+
+<!-- MODAL POPUP -->
+<!-- Modal -->
+<div class="modal" id="articleModal">
+  <div class="modal-content">
+      <img id="modalImage" src="" alt="Article Image">
+      <div class="modal-text">
+          <h2 id="modalTitle" class="modal-title"></h2>
+          <p id="modalMeta" class="modal-meta"></p>
+          <p id="modalDescription" class="modal-description"></p>
+      </div>
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+  </div>
+</div>
 
   
   <section class="gallery-section">
@@ -313,6 +334,7 @@
       <p>© 2025 Spektrum Production. All Rights Reserved.</p>
   </div>
 </footer>
+
 
 
 </body>
