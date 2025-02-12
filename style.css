@@ -453,6 +453,7 @@ body {
 .product-item img {
     width: 100%;
     max-height: 200px;
+    max-width: 150px;
     object-fit: contain;
     margin-bottom: 15px;
     transition: transform 0.3s ease-in-out;
@@ -599,7 +600,7 @@ body {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 5px;
     max-width: 1200px;
     margin: 0;
     width: 100% ;
@@ -608,7 +609,7 @@ body {
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 5px;
     background: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
