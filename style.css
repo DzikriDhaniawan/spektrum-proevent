@@ -606,22 +606,25 @@ body {
         display: grid;
         gap: 8px; /* Tambah jarak antar kartu */
         padding: 10px;
-    }}
+    }
     
     .product-item {
-        width: 150px;
-        height: 170px;
+        width: 180px;
+        height: 180px;
         border-radius: 12px;
         overflow: hidden;
         background: #ffffff;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        position: relative;
+        right: 10%;
     }
     
     .product-item h2 {
-        font-size: 1.2rem;
-        font-weight: 700;
+        font-size: 1.1rem;
+        font-weight: 780;
     }
+}
 
 
 /*===========================ABOUT SECTION END===================================*/
