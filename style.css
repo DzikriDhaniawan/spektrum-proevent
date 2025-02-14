@@ -234,6 +234,11 @@ body {
         width: 100%;
     }
 
+    .nav-links li a:hover {
+        color: rgb(242, 77, 0);
+        transition: 0.5s ease;
+    }
+
     .menu-toggle {
         display: block;
         cursor: pointer;
