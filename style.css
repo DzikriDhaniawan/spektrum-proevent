@@ -197,10 +197,14 @@ body {
 /*========media query hero section===========*/
 
 @media screen and (max-width: 768px) {
+    .logo img {
+        width: 150px;
+        height: auto;
+    }
+    
     .navbar {
-        flex-direction: column;
         align-items: flex-start;
-        padding: 15px;
+        padding: 6px;
         background-color: rgba(0, 0, 0, 0);
     }
 
@@ -211,6 +215,7 @@ body {
         text-align: left;
         padding: 0;
         gap: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .nav-links.active {
@@ -236,10 +241,11 @@ body {
 
     .menu-toggle span {
         display: block;
-        width: 30px;
+        width:15px;
         height: 3px;
-        background-color: white;
-        margin: 6px 0;
+        background-color: rgb(255, 255, 255);
+        margin:5px 0;
+        margin-top: 3px;
     }
 }
 
@@ -742,7 +748,7 @@ body {
 
     .articles-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px; /* Tambah jarak antar kartu */
         padding: 10px;
     }
