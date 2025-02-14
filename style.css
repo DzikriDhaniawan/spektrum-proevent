@@ -750,9 +750,11 @@ body {
 /* Responsif untuk Layar Sangat Kecil (HP Kecil) */
 @media (max-width: 480px) {
     .gallery-grid {
-        grid-template-columns: repeat(1, 1fr); /* 1 kolom */
+        grid-template-columns: repeat(3, 1fr); /* 1 kolom */
         gap: 5px;
         right: 0;
+        width: 50%;
+        height: 50%;
     }
 
     .gallery-item img {
