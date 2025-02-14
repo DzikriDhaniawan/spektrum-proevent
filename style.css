@@ -253,7 +253,7 @@ body {
     .hero-content h1 {
         font-size: 1.8em;
         line-height: 1.2;
-        margin-top: 280px;
+        margin-top: 220px;
     }
 
     .hero-content p {
@@ -269,6 +269,7 @@ body {
     .contact-button-section {
         align-items: center;
         gap: 15px;
+        margin-left: 85px;
     }
 
     .contact-button {
