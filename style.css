@@ -640,6 +640,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .articles-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
     .modal-content {
         flex-direction: column;
         width: 90%;
