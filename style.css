@@ -605,7 +605,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
         display: grid;
         gap: 8px; /* Tambah jarak antar kartu */
-        padding: 10px;
     }
     
     .product-item {
