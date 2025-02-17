@@ -281,6 +281,7 @@ body {
         align-items: center;
         gap: 15px;
         margin-left: 85px;
+        display: none;
     }
 
     .contact-button {
@@ -602,14 +603,15 @@ body {
     }
 
     .product-grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         display: grid;
         gap: 8px; /* Tambah jarak antar kartu */
+        justify-content: center;
     }
     
     .product-item {
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
         border-radius: 12px;
         overflow: hidden;
         background: #ffffff;
@@ -620,7 +622,7 @@ body {
     }
     
     .product-item h2 {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
         font-weight: 780;
     }
 }
