@@ -597,6 +597,13 @@ body {
 
 @media (max-width: 768px) {
 
+    .product-section {
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        left: 0;
+    }
+
     .product-title {
         font-size: 2rem;
         margin-bottom: 0;
