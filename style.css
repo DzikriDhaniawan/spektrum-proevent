@@ -605,7 +605,7 @@ body {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
         display: grid;
-        gap: 8px; /* Tambah jarak antar kartu */
+        gap: 8px;
         justify-content: center;
     }
     
@@ -618,7 +618,6 @@ body {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         position: relative;
-        right: 10%;
     }
     
     .product-item h2 {
