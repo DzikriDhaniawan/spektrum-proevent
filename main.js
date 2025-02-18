@@ -22,3 +22,15 @@ function toggleMenu() {
     const navLinks = document.querySelector(".nav-links");
     navLinks.classList.toggle("active");
 }
+
+const productGrid = document.querySelector('.product-grid');
+const pageButtons = document.querySelectorAll('.page-btn');
+
+pageButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        productGrid.style.transform = `translateX(-${index * 100}%)`;
+        
+        pageButtons.forEach(button => button.classList.remove('active'));
+        btn.classList.add('active');
+    });
+});
