@@ -541,6 +541,32 @@ body {
     margin-bottom: 30px;
 }
 
+/* Filter Buttons */
+#filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    border: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #ff6600;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: #ff6600;
+    color: white;
+}
+
+/* Product Grid */
 .slider-wrapper {
     overflow: hidden;
     max-width: 100%;
@@ -561,10 +587,17 @@ body {
     background: white;
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: none; /* Tersembunyi default */
+}
 
+.product-item.show {
+    display: block; /* Tampilkan hanya yang sesuai kategori */
+}
+
+.product-item.display.default-display {
+    display: block; /* Tampilkan produk Display secara default */
 }
 
 .product-item img {
@@ -580,17 +613,9 @@ body {
     margin-top: 10px;
 }
 
-.product-item:hover{
+.product-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-
-}
-
-/* Pagination Styling */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 .page-btn {
@@ -620,7 +645,7 @@ body {
 
     .product-item {
         padding: 10px;
-        border-radius:10px ;
+        border-radius: 10px;
     }
 
     .product-item h2 {
@@ -633,7 +658,6 @@ body {
         font-size: 0.9rem;
     }
 }
-
 
 /*===========================ABOUT SECTION END===================================*/
 
@@ -700,7 +724,6 @@ body {
     transform: translateY(-5px);
 }
 
-/* Modal Overlay */
 /* Style Modal */
 .modal {
     display: none;
@@ -723,7 +746,7 @@ body {
     border-radius: 12px;
     overflow: hidden;
     padding: 20px;
-    animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.4s ease-in-out;
     position: relative;
 }
 

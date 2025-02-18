@@ -181,26 +181,57 @@
         
 
 
-<div class="product-section" id="product">
-    <h2 class="product-title">OUR PRODUCT</h2>
-    <div class="slider-wrapper">
-        <div class="product-grid">
-            <div class="product-item"><img src="pict/tv led.png" alt="TV LED"><h2>TV LED</h2></div>
-            <div class="product-item"><img src="pict/tv touch screen.png" alt="TV Touchscreen"><h2>TV Touchscreen</h2></div>
-            <div class="product-item"><img src="pict/tdspic.png" alt="Digital Signage"><h2>Digital Signage</h2></div>
-            <div class="product-item"><img src="pict/vidtron.png" alt="LED Videotron"><h2>LED Videotron</h2></div>
-            <div class="product-item"><img src="pict/screen.png" alt="Screen"><h2>Screen</h2></div>
-            <div class="product-item"><img src="pict/projector.png" alt="Projector"><h2>Projector</h2></div>
-        </div>
-    </div>
-    <div class="pagination">
-        <button class="page-btn active" data-index="0">1</button>
-        <button class="page-btn" data-index="1">2</button>
-        <button class="page-btn" data-index="2">3</button>
-        <button class="page-btn" data-index="3">4</button>
-    </div>
-</div>
+    <div class="product-section" id="product">
+      <h2 class="product-title">OUR PRODUCT</h2>
   
+      <!-- Filter Buttons -->
+      <div id="filter-buttons">
+          <button class="filter-btn" onclick="filterProducts('display')">Display</button>
+          <button class="filter-btn" onclick="filterProducts('lighting')">Lighting</button>
+          <button class="filter-btn" onclick="filterProducts('audio')">Audio</button>
+          <button class="filter-btn" onclick="filterProducts('pcprinter')">Pc / Printer</button>
+          <button class="filter-btn" onclick="filterProducts('others')">Others</button>
+      </div>
+  
+      <div class="slider-wrapper">
+          <div class="product-grid">
+              <div class="product-item display default-display"><img src="pict/tv led.png" alt="TV LED"><h2>TV LED</h2></div>
+              <div class="product-item display default-display"><img src="pict/tv touch screen.png" alt="TV Touchscreen"><h2>TV Touchscreen</h2></div>
+              <div class="product-item display default-display"><img src="pict/tdspic.png" alt="Digital Signage"><h2>Digital Signage</h2></div>
+              <div class="product-item display default-display"><img src="pict/vidtron.png" alt="LED Videotron"><h2>LED Videotron</h2></div>
+              <div class="product-item display default-display"><img src="pict/screen.png" alt="Screen"><h2>Screen</h2></div>
+              <div class="product-item display default-display"><img src="pict/projector.png" alt="Projector"><h2>Projector</h2></div>
+  
+              <div class="product-item lighting"><img src="pict/parled.png" alt="Projector"><h2>Parled</h2></div>
+              <div class="product-item lighting"><img src="pict/movingbeam.png" alt="Projector"><h2>Moving Beam</h2></div>
+              <div class="product-item lighting"><img src="pict/freshnel.png" alt="Projector"><h2>Freshnel</h2></div>
+              <div class="product-item lighting"><img src="pict/minibrute.png" alt="Projector"><h2>Minibrute</h2></div>
+              <div class="product-item lighting"><img src="pict/smokemachine.png" alt="Projector"><h2>Smoke Machine</h2></div>
+              <div class="product-item lighting"><img src="pict/followspot.png" alt="Projector"><h2>Follow Spot</h2></div>
+              <div class="product-item lighting"><img src="pict/halogenspot.png" alt="Projector"><h2>Halogen Spot</h2></div>
+              <div class="product-item lighting"><img src="pict/mirrorball.png" alt="Projector"><h2>Mirror Ball</h2></div>
+  
+              <div class="product-item audio"><img src="pict/soundsystem.png" alt="Projector"><h2>Sound System</h2></div>
+              <div class="product-item audio"><img src="pict/wirelessmic.png" alt="Projector"><h2>Wireless Mic</h2></div>
+              <div class="product-item audio"><img src="pict/clipon.png" alt="Projector"><h2>Clip On Mic</h2></div>
+              <div class="product-item audio"><img src="pict/podium.png" alt="Projector"><h2>Podium Mic</h2></div>
+              <div class="product-item audio"><img src="pict/bandequip.png" alt="Projector"><h2>Band Equipment</h2></div>
+              <div class="product-item audio"><img src="pict/accoustic.png" alt="Projector"><h2>Accoustic Equipment</h2></div>
+              <div class="product-item audio"><img src="pict/djequip.png" alt="Projector"><h2>DJ Equipment</h2></div>
+  
+              <div class="product-item pcprinter"><img src="pict/laptop.png" alt="Projector"><h2>Laptop</h2></div>
+              <div class="product-item pcprinter"><img src="pict/minipc.png" alt="Projector"><h2>Mini PC</h2></div>
+              <div class="product-item pcprinter"><img src="pict/printer.png" alt="Projector"><h2>Printer</h2></div>
+              <div class="product-item pcprinter"><img src="pict/fotocopy.png" alt="Projector"><h2>Mesin Fotocopy</h2></div>
+  
+              <div class="product-item others"><img src="pict/switcher.png" alt="Projector"><h2>Switcher</h2></div>
+              <div class="product-item others"><img src="pict/HT.png" alt="Projector"><h2>HT</h2></div>
+              <div class="product-item others"><img src="pict/rigging.png" alt="Projector"><h2>Rigging</h2></div>
+              <div class="product-item others"><img src="pict/backdrop.png" alt="Projector"><h2>Backdrop</h2></div>
+          </div>
+      </div>
+  </div>
+      
 
 
   <section class="popular-articles" id="articles">
