@@ -6,7 +6,7 @@
     <title>Spektrum Production</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <script></script>
 
 </head>
@@ -16,6 +16,7 @@
         <video autoplay muted loop> <source src="pict/videocolor.mp4" type="video/mp4"> </video>
       </div>
         <div class="overlay">
+
           <nav class="navbar">
             <a href="#" class="logo"><img src="pict/logo spektrum.png" alt="Logo Spektrum"></a>
             
@@ -180,7 +181,7 @@
     </section>
         
 
-
+<!--video modal product-->
     <div class="product-section" id="product">
       <h2 class="product-title">OUR PRODUCT</h2>
   
@@ -231,7 +232,8 @@
           </div>
       </div>
   </div>
-      
+  
+  <!-- Video Popup -->
 
 
   <section class="popular-articles" id="articles">
@@ -339,60 +341,50 @@
   <div class="container">
       <h1 class="gallery-title">Gallery</h1>
       <div class="gallery-grid">
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/gallery collection 1.jpg" alt="Crown Plaza Tampa">
-              <div class="overlay"><p>Crown Plaza Tampa</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/gallery collection.jpg" alt="Toddlers">
-              <div class="overlay"><p>Toddlers</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/the end of woman 1.jpg" alt="Young and Restless">
-              <div class="overlay"><p>Young and Restless</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/signing blue.jpg" alt="Sweets for my sweet">
-              <div class="overlay"><p>Sweets for my sweet</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/pertamina patra niaga.jpg" alt="Green Interiors">
-              <div class="overlay"><p>Green Interiors</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/interbat.jpg" alt="Over the Horizon">
-              <div class="overlay"><p>Over the Horizon</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/pilkada karangasem.jpg" alt="River Hills Golf Club">
-              <div class="overlay"><p>River Hills Golf Club</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/pro aad.jpg" alt="Childhood adventures">
-              <div class="overlay"><p>Childhood adventures</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
               <img src="pict/women on the move  2.jpg" alt="Natural beauty">
-              <div class="overlay"><p>Natural beauty</p></div>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" onclick="openLightbox(this)">
             <img src="pict/gallery.jpg" alt="Natural beauty">
-            <div class="overlay"><p>Natural beauty</p></div>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openLightbox(this)">
           <img src="pict/signing blue 2.jpg" alt="Natural beauty">
-          <div class="overlay"><p>Natural beauty</p></div>
       </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openLightbox(this)">
           <img src="pict/interbat.jpg" alt="Natural beauty">
-          <div class="overlay"><p>Natural beauty</p></div>
       </div>
-
-
       </div>
   </div>
 </section>
 
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Zoomed Image">
+</div>
 
 
 <footer class="contact-section" id="contact">

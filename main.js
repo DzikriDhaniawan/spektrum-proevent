@@ -78,3 +78,36 @@ pageButtons.forEach((btn, index) => {
         btn.classList.add('active');
     });
 });
+
+//NAVBAR 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+
+    if (navbar) {
+        console.log("Navbar ditemukan!"); // Debugging
+
+        window.addEventListener("scroll", function () {
+            console.log("Scroll position:", window.scrollY); // Debugging
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    } else {
+        console.error("Elemen .navbar tidak ditemukan!");
+    }
+});
+
+function openLightbox(element) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightboxImg.src = element.querySelector('img').src;
+    lightbox.classList.add('show');
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('show');
+}
