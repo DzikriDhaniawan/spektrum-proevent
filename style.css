@@ -997,6 +997,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s, visibility .3s;
+    z-index: 999999;
 }
 
 .lightbox img {
