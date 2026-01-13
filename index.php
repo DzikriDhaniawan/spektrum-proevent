@@ -1,3 +1,7 @@
+<?php
+include "config/database.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,7 +36,7 @@
                 <li><a href="#hero-section">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#product">Product</a></li>
-                <li><a href="#articles">Article</a></li>
+                <li><a href="#article">Article</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -182,144 +186,64 @@
         
 
 <!--video modal product-->
-    <div class="product-section" id="product">
-      <h2 class="product-title">OUR PRODUCT</h2>
-  
-      <!-- Filter Buttons -->
-      <div id="filter-buttons">
+<section class="product-section" id="product">
+  <h2 class="product-title">Our Product</h2>
+
+        <div id="filter-buttons">
           <button class="filter-btn" onclick="filterProducts('display')">Display</button>
           <button class="filter-btn" onclick="filterProducts('lighting')">Lighting</button>
           <button class="filter-btn" onclick="filterProducts('audio')">Audio</button>
           <button class="filter-btn" onclick="filterProducts('pcprinter')">Pc / Printer</button>
+          <button class="filter-btn" onclick="filterProducts('conference')">Conference System</button>
+          <button class="filter-btn" onclick="filterProducts('genset')">Genset</button>
           <button class="filter-btn" onclick="filterProducts('others')">Others</button>
       </div>
-  
-      <div class="slider-wrapper">
-          <div class="product-grid">
-              <div class="product-item display default-display"><img src="pict/tv led.png" alt="TV LED"><h2>TV LED</h2></div>
-              <div class="product-item display default-display"><img src="pict/tv touch screen.png" alt="TV Touchscreen"><h2>TV Touchscreen</h2></div>
-              <div class="product-item display default-display"><img src="pict/tdspic.png" alt="Digital Signage"><h2>Digital Signage</h2></div>
-              <div class="product-item display default-display"><img src="pict/vidtron.png" alt="LED Videotron"><h2>LED Videotron</h2></div>
-              <div class="product-item display default-display"><img src="pict/screen.png" alt="Screen"><h2>Screen</h2></div>
-              <div class="product-item display default-display"><img src="pict/projector.png" alt="Projector"><h2>Projector</h2></div>
-  
-              <div class="product-item lighting"><img src="pict/parled.png" alt="Projector"><h2>Parled</h2></div>
-              <div class="product-item lighting"><img src="pict/movingbeam.png" alt="Projector"><h2>Moving Beam</h2></div>
-              <div class="product-item lighting"><img src="pict/freshnel.png" alt="Projector"><h2>Freshnel</h2></div>
-              <div class="product-item lighting"><img src="pict/minibrute.png" alt="Projector"><h2>Minibrute</h2></div>
-              <div class="product-item lighting"><img src="pict/smokemachine.png" alt="Projector"><h2>Smoke Machine</h2></div>
-              <div class="product-item lighting"><img src="pict/followspot.png" alt="Projector"><h2>Follow Spot</h2></div>
-              <div class="product-item lighting"><img src="pict/halogenspot.png" alt="Projector"><h2>Halogen Spot</h2></div>
-              <div class="product-item lighting"><img src="pict/mirrorball.png" alt="Projector"><h2>Mirror Ball</h2></div>
-  
-              <div class="product-item audio"><img src="pict/soundsystem.png" alt="Projector"><h2>Sound System</h2></div>
-              <div class="product-item audio"><img src="pict/wirelessmic.png" alt="Projector"><h2>Wireless Mic</h2></div>
-              <div class="product-item audio"><img src="pict/clipon.png" alt="Projector"><h2>Clip On Mic</h2></div>
-              <div class="product-item audio"><img src="pict/podium.png" alt="Projector"><h2>Podium Mic</h2></div>
-              <div class="product-item audio"><img src="pict/bandequip.png" alt="Projector"><h2>Band Equipment</h2></div>
-              <div class="product-item audio"><img src="pict/accoustic.png" alt="Projector"><h2>Accoustic Equipment</h2></div>
-              <div class="product-item audio"><img src="pict/djequip.png" alt="Projector"><h2>DJ Equipment</h2></div>
-  
-              <div class="product-item pcprinter"><img src="pict/laptop.png" alt="Projector"><h2>Laptop</h2></div>
-              <div class="product-item pcprinter"><img src="pict/minipc.png" alt="Projector"><h2>Mini PC</h2></div>
-              <div class="product-item pcprinter"><img src="pict/printer.png" alt="Projector"><h2>Printer</h2></div>
-              <div class="product-item pcprinter"><img src="pict/fotocopy.png" alt="Projector"><h2>Mesin Fotocopy</h2></div>
-  
-              <div class="product-item others"><img src="pict/switcher.png" alt="Projector"><h2>Switcher</h2></div>
-              <div class="product-item others"><img src="pict/HT.png" alt="Projector"><h2>HT</h2></div>
-              <div class="product-item others"><img src="pict/rigging.png" alt="Projector"><h2>Rigging</h2></div>
-              <div class="product-item others"><img src="pict/backdrop.png" alt="Projector"><h2>Backdrop</h2></div>
-          </div>
-      </div>
+
+
+<div class="slider-wrapper">
+    <div class="product-grid">
+      <?php
+      $products = mysqli_query($conn, "SELECT * FROM products");
+      while ($p = mysqli_fetch_assoc($products)):
+      ?>
+        <div class="product-item <?= $p['category'] ?>">
+          <img src="uploads/<?= $p['image'] ?>" alt="<?= $p['nama'] ?>">
+          <h2><?= $p['nama'] ?></h2>  
+        </div>
+      <?php endwhile; ?>
+    </div>
+
   </div>
+</section>
+
+
   
   <!-- Video Popup -->
 
+<section class="popular-articles" id="article">
+  <h2 class="section-title">Articles</h2>
+  <div class="articles-container">
 
-  <section class="popular-articles" id="articles">
-    <h2 class="section-title">Articles</h2>
-    <div class="articles-container">
-
-        <div class="article-card" onclick="openModal('pict/evaluasi.jpeg','Evaluasi Kinerja DPR Wilayah Provinsi Bali', '15 Mei 2023', 'Evaluasi kinerja DPR di wilayah Bali membahas berbagai pencapaian dan tantangan dalam periode legislatif terbaru.')">
-            <img src="pict/evaluasi.jpeg" alt="Artikel 1">
-            <div class="article-info">
-                <h3 class="article-title">Evaluasi Kinerja DPR Wilayah Provinsi Bali</h3>
-                <p class="article-meta">15 Mei 2023</p>
-            </div> 
-        </div>
-
-        <div class="article-card" onclick="openModal('pict/joyday event.jpeg', 'Evolve in Unity Co-Create New Future', '23 Mei 2023', 'Acara ini mempertemukan para pemimpin industri untuk menciptakan masa depan yang lebih inovatif dan berkelanjutan.')">
-            <img src="pict/joyday event.jpeg" alt="Artikel 2">
-            <div class="article-info">
-                <h3 class="article-title">Evolve in Unity Co-Create New Future</h3>
-                <p class="article-meta">23 Mei 2023</p>
-            </div>
-        </div>
-
-        <div class="article-card" onclick="openModal('pict/women on the move  2.jpg', 'Women on the Move', '17 Mei 2023', 'Acara ini mengangkat peran perempuan dalam kepemimpinan dan dampaknya terhadap masyarakat.')">
-            <img src="pict/women on the move  2.jpg" alt="Artikel 3">
-            <div class="article-info">
-                <h3 class="article-title">Women on the Move</h3>
-                <p class="article-meta">17 Mei 2023</p>
-            </div>
-        </div>
-
-        <div class="article-card" onclick="openModal('pict/signing blue.jpg', 'Signing Blue Advancing Responsible Marine', '29 Mei 2023', 'Inisiatif Signing Blue bertujuan untuk meningkatkan kesadaran dan aksi dalam perlindungan lingkungan laut.')">
-            <img src="pict/signing blue.jpg" alt="Artikel 4">
-            <div class="article-info">
-                <h3 class="article-title">Signing Blue Advancing Responsible Marine</h3>
-                <p class="article-meta">29 Mei 2023</p>
-            </div>
-        </div>
-
-        <div class="article-card" onclick="openModal('pict/inavasc.jpg', 'The 14th Indonesian Vascular Conference', '29 Mei 2023', 'Inisiatif Signing Blue bertujuan untuk meningkatkan kesadaran dan aksi dalam perlindungan lingkungan laut.')">
-          <img src="pict/inavasc.jpg" alt="Artikel 4">
+      <?php
+      $articles = mysqli_query($conn, "SELECT * FROM articles");
+      while ($a = mysqli_fetch_assoc($articles)):
+      ?>
+        <div class="article-card"
+          onclick="openModal(
+            'uploads/<?= $a['image'] ?>',
+            '<?= $a['title'] ?>',
+            '<?= $a['eventDate'] ?> - ',
+            `<?= $a['description'] ?>`
+          )">
+          <img src="uploads/<?= $a['image'] ?>" alt="<?= $a['title'] ?>">
           <div class="article-info">
-              <h3 class="article-title">The 14th Indonesian Vascular Conference</h3>
-              <p class="article-meta">29 Mei 2023</p>
+          <h3 class="article-title"><?= $a['title'] ?></h3>
+          <p class="article-meta"><?= $a['eventDate'] ?></p>
           </div>
-      </div>
-      <div class="article-card" onclick="openModal('pict/evaluasi.jpeg','Evaluasi Kinerja DPR Wilayah Provinsi Bali', '15 Mei 2023', 'Evaluasi kinerja DPR di wilayah Bali membahas berbagai pencapaian dan tantangan dalam periode legislatif terbaru.')">
-        <img src="pict/evaluasi.jpeg" alt="Artikel 1">
-        <div class="article-info">
-            <h3 class="article-title">Evaluasi Kinerja DPR Wilayah Provinsi Bali</h3>
-            <p class="article-meta">15 Mei 2023</p>
         </div>
+      <?php endwhile; ?>
     </div>
 
-    <div class="article-card" onclick="openModal('pict/joyday event.jpeg', 'Evolve in Unity Co-Create New Future', '23 Mei 2023', 'Acara ini mempertemukan para pemimpin industri untuk menciptakan masa depan yang lebih inovatif dan berkelanjutan.')">
-        <img src="pict/joyday event.jpeg" alt="Artikel 2">
-        <div class="article-info">
-            <h3 class="article-title">Evolve in Unity Co-Create New Future</h3>
-            <p class="article-meta">23 Mei 2023</p>
-        </div>
-    </div>
-
-    <div class="article-card" onclick="openModal('pict/women on the move  2.jpg', 'Women on the Move', '17 Mei 2023', 'Acara ini mengangkat peran perempuan dalam kepemimpinan dan dampaknya terhadap masyarakat.')">
-        <img src="pict/women on the move  2.jpg" alt="Artikel 3">
-        <div class="article-info">
-            <h3 class="article-title">Women on the Move</h3>
-            <p class="article-meta">17 Mei 2023</p>
-        </div>
-    </div>
-
-    <div class="article-card" onclick="openModal('pict/signing blue.jpg', 'Signing Blue Advancing Responsible Marine', '29 Mei 2023', 'Inisiatif Signing Blue bertujuan untuk meningkatkan kesadaran dan aksi dalam perlindungan lingkungan laut.')">
-        <img src="pict/signing blue.jpg" alt="Artikel 4">
-        <div class="article-info">
-            <h3 class="article-title">Signing Blue Advancing Responsible Marine</h3>
-            <p class="article-meta">29 Mei 2023</p>
-        </div>
-    </div>
-
-    <div class="article-card" onclick="openModal('pict/inavasc.jpg', 'The 14th Indonesian Vascular Conference', '29 Mei 2023', 'Inisiatif Signing Blue bertujuan untuk meningkatkan kesadaran dan aksi dalam perlindungan lingkungan laut.')">
-      <img src="pict/inavasc.jpg" alt="Artikel 4">
-      <div class="article-info">
-          <h3 class="article-title">The 14th Indonesian Vascular Conference</h3>
-          <p class="article-meta">29 Mei 2023</p>
-      </div>
-  </div>
-
-    </div>
 </section>
 
 <!-- MODAL POPUP -->

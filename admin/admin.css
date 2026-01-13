@@ -1,0 +1,100 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+.admin-wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.05);
+  margin-bottom: 30px;
+}
+
+form input, form textarea {
+  width: 97%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  background: #1202ef;
+  color: #fff;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+img {
+  border-radius: 8px;
+}
+
+.action a {
+  margin-right: 10px;
+  color: #646469;
+}
+
+.action a.delete {
+  text-decoration: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.modal-action {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.modal-action button {
+  flex: 1;
+  padding: 10px;
+}
