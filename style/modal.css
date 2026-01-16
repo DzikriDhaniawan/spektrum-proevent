@@ -1,0 +1,75 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #fff;
+  width: 360px;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: center;
+  position: relative;
+  animation: pop .3s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(.9); opacity: 0 }
+  to   { transform: scale(1); opacity: 1 }
+}
+
+.modal-box h2 {
+  margin-bottom: 8px;
+}
+
+.modal-box p {
+  color: #666;
+  font-size: 14px;
+}
+
+.modal-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.modal-box button {
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-box button:hover {
+  background: #4338ca;
+}
+
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.register-text {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+#loginError {
+  color: red;
+  margin-top: 10px;
+  font-size: 13px;
+}
